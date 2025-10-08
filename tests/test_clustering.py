@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
-from numpy.testing import assert_allclose, assert_array_equal
-from src.clustering import ABITClustering, _find_split_indices
+from numpy.testing import assert_allclose
+from clustering import ABITClustering, _find_split_indices
 
 
 @pytest.fixture
@@ -144,7 +144,7 @@ def test_fit_edge_cases(clustering):
     T = np.ones(5, dtype=int)
     clustering.fit(X, T)
     assert len(set(clustering.labels_)) == 1
-    
+
 
 def test_tree_structure(clustering):
     X = np.array([[1,0],[0,1],[1,1],[0,0]])
