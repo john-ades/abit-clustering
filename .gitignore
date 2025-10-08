@@ -1,4 +1,5 @@
 .venv
 .DS_Store
 .pytest_cache
+dist/
 abit_clustering.egg-info/
