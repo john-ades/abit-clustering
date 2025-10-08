@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 from numpy.testing import assert_allclose, assert_array_equal
-from src.clustering import ABITClustering, _find_split_indices
+from clustering import ABITClustering, _find_split_indices
 
 @pytest.fixture
 def clustering():
