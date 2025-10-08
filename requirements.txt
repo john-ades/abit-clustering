@@ -1,2 +1,4 @@
 numpy
 pytest
+sentence_transformers
+anytree

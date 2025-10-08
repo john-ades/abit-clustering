@@ -127,8 +127,9 @@ def test_fit_min_cluster_size_enforcement(clustering):
 
 def test_fit_edge_cases(clustering):
     # Empty input
-    with pytest.raises(IndexError):  # Matches current code behavior
-        clustering.fit(np.empty((0, 2)), np.empty(0, dtype=int))
+    clustering.fit(np.empty((0, 2)), np.empty(0, dtype=int))
+    assert len(clustering.labels_) == 0
+    assert clustering.tree_ is None
 
     # Single sample
     X = np.array([[1, 0]])
@@ -143,7 +144,7 @@ def test_fit_edge_cases(clustering):
     T = np.ones(5, dtype=int)
     clustering.fit(X, T)
     assert len(set(clustering.labels_)) == 1
-
+    
 
 def test_tree_structure(clustering):
     X = np.array([[1,0],[0,1],[1,1],[0,0]])
