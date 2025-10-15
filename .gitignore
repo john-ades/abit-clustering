@@ -1,9 +1,17 @@
-.venv
+.venv/
 .DS_Store
-.pytest_cache
-*/.pytest_cache
-.idea
-__pycache__
-*/__pycache__
+
+# Pytest cache
+.pytest_cache/
+**/.pytest_cache/
+
+# IDE settings
+.idea/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+
+# Build artifacts
 dist/
-abit_clustering.egg-info/
+*.egg-info/
