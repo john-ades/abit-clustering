@@ -2,7 +2,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from anytree import Node, RenderTree
 
-from clustering import ABITClustering
+from abit_clustering import ABITClustering
 
 def create_anytree(cluster_tree, tokens):
     """Convert cluster tree to anytree structure."""

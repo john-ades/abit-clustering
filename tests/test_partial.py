@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 from numpy.testing import assert_allclose
-from clustering import ABITClustering
+from abit_clustering import ABITClustering
 
 @pytest.fixture
 def clustering():
